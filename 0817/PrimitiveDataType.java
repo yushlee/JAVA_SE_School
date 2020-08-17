@@ -27,6 +27,25 @@ public class PrimitiveDataType {
 		System.out.println(Double.MIN_VALUE);
 		System.out.println(Double.MAX_VALUE);		
 		
+		boolean value1 = true;
+		boolean value2 = false;
+		
+		
+		// 字元
+		char charValue = 'A';
+		System.out.println( (int) Character.MIN_VALUE);
+		System.out.println( (int) Character.MAX_VALUE);
+		
+		System.out.println( (char) 65);
+		System.out.println( (char) 97);
+		
+		charValue = '	';
+		System.out.println( (int) charValue);
+		charValue = ' ';
+		System.out.println( (int) charValue);
+		
+		
+		
 	}
 
 }
