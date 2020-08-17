@@ -31,6 +31,7 @@ public class AccountMain {
 //		wendyAccount.showBalance();
 		wendyAccount.withdrawal(400);
 		wendyAccount.withdrawal(600);
+		wendyAccount.deposit(100);
 		
 	}
 

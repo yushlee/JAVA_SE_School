@@ -11,14 +11,20 @@ public class Account {
 	
 	// 存款
 	public void deposit(int money){
-		balance = balance + money;
+		if(money > 0){
+			balance = balance + money;
+		}
+		
 		showBalance();
 	}
 	
 	// 提款 
 	public void withdrawal(int money){
-		if(balance >= money) {
+		boolean isPass = balance >= money;
+		if(isPass) {
 			balance = balance - money;
+		} else {
+			System.out.println("您的存款餘額不足...哈哈");
 		}
 		
 		showBalance();
