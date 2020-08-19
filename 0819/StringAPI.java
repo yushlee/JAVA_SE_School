@@ -38,6 +38,35 @@ public class StringAPI {
 		System.out.println(texts[1]);
 		System.out.println(texts[2]);
 		System.out.println(texts[3]);
+		
+		System.out.println("============================");
+		
+		String strText = "ABDE";
+		String start = strText.substring(0, 2); // AB
+		String end = strText.substring(2, 4);
+		String sumText = start + "C" + end;
+		System.out.println(sumText);
+		
+		
+		
+//		StringBuilder sb = new StringBuilder();
+		StringBuffer sb = new StringBuffer();
+		
+		sb.append("A");
+		sb.append("B");
+		// C
+		sb.append("D");
+		sb.append("E");
+		System.out.println(sb.toString());
+		sb.insert(2, "C");
+		System.out.println(sb.toString());
+		sb.deleteCharAt(2);
+		System.out.println(sb.toString());
+		System.out.println(sb.length());
+		System.out.println(sb.charAt(2));
+		System.out.println(sb.reverse());
+		
+		
 	}
 
 }
