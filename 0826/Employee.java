@@ -7,6 +7,37 @@ public class Employee {
 	private String empName;
 	private String title;
 	
+	public Employee(){}
+	
+	public Employee(int number){
+		this(number, "Tom");
+	}
+	
+	public Employee(int empNumber, String name){
+		// 區域變數:number
+		// 成員變數:empNumber
+//		empNumber = number;
+		this.empNumber = empNumber;
+		empName = name;
+	}
+	
+	
+	
+	public Employee(int empNumber, String empName, String title) {
+		this.empNumber = empNumber;
+		this.empName = empName;
+		this.title = title;
+	}
+	
+	public void methodA(){
+//		methodB();
+		this.methodB();
+	}
+	
+	public void methodB(){
+		
+	}
+	
 	public int getEmpNumber() {
 		return empNumber;
 	}
