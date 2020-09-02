@@ -8,7 +8,9 @@ public class ReferenceCastingMain {
 		
 //		upCasting();
 		
-		compileAndRunTime();
+//		compileAndRunTime();
+		
+		dataTypeCallMethod();
 	}
 	
 	public static void downCasting(){
@@ -34,6 +36,9 @@ public class ReferenceCastingMain {
 	}
 	
 	public static void compileAndRunTime(){
+//		Compiler Time (編譯時期)：取決於資料型別
+//		Run Time (執行時期)：取決於資料實體
+		
 		// 父
 //		Cat cat = new Cat();
 		// 子
@@ -45,6 +50,24 @@ public class ReferenceCastingMain {
 		kitty.sayHello();
 	}
 	
+	public static void dataTypeCallMethod(){
+		// 物件可操作的欄位及方法取決於資料所宣告的型別
+//		Animal animal = new HelloKitty();
+		Animal animal = new Cat();
+		animal.eat();
+//		animal.jump();
+//		animal.sayHello();		
+		
+		Cat cat = (Cat) animal; 
+		cat.eat();
+//		cat.jump();
+//		cat.sayHello();
+		
+		HelloKitty kitty = (HelloKitty) animal;
+		kitty.eat();
+		kitty.jump();
+		kitty.sayHello();
+	}
 }
 
 
