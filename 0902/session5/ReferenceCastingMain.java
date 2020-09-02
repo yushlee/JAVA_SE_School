@@ -3,14 +3,32 @@ package com.training.session5;
 public class ReferenceCastingMain {
 
 	public static void main(String[] args) {
-//		Cat cat = new Cat();
+
+//		downCasting();
+		
+		upCasting();
+	}
+	
+	public static void downCasting(){
 		// DownCasting (向下轉型)
+//		Cat cat = new Cat();		
 //		HelloKitty kitty = (HelloKitty) cat;
 		
 		// 上轉下(明確轉型)
 		// java.lang.ClassCastException:
-		HelloKitty kitty = (HelloKitty) new Cat();
+		// 父 → 子 Explicit (須明確轉型)
+		HelloKitty kitty = (HelloKitty) new Cat();	
+	}
+	
+	public static void upCasting(){
+		// 子 → 父 Implicit (隱含)
+//		HelloKitty kitty = new HelloKitty();
+//		Cat cat = kitty;
+		// UpCasting  (向上轉型)
+		Cat cat = new HelloKitty();
 		
+		Animal animalOne = new Cat();
+		Animal animalTwo = new HelloKitty();
 	}
 
 }
