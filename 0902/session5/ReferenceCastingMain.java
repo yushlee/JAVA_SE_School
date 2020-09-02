@@ -6,7 +6,9 @@ public class ReferenceCastingMain {
 
 //		downCasting();
 		
-		upCasting();
+//		upCasting();
+		
+		compileAndRunTime();
 	}
 	
 	public static void downCasting(){
@@ -30,7 +32,19 @@ public class ReferenceCastingMain {
 		Animal animalOne = new Cat();
 		Animal animalTwo = new HelloKitty();
 	}
-
+	
+	public static void compileAndRunTime(){
+		// 父
+//		Cat cat = new Cat();
+		// 子
+//		HelloKitty kitty = (HelloKitty)cat;
+//		kitty.sayHello();
+		
+		Cat cat = new HelloKitty();		
+		HelloKitty kitty = (HelloKitty) cat;
+		kitty.sayHello();
+	}
+	
 }
 
 
