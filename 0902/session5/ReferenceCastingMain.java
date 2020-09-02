@@ -10,7 +10,9 @@ public class ReferenceCastingMain {
 		
 //		compileAndRunTime();
 		
-		dataTypeCallMethod();
+//		dataTypeCallMethod();
+		
+		instanceofMethod();
 	}
 	
 	public static void downCasting(){
@@ -19,7 +21,7 @@ public class ReferenceCastingMain {
 //		HelloKitty kitty = (HelloKitty) cat;
 		
 		// 上轉下(明確轉型)
-		// java.lang.ClassCastException:
+		// java.lang.ClassCastException(類別轉型錯誤)
 		// 父 → 子 Explicit (須明確轉型)
 		HelloKitty kitty = (HelloKitty) new Cat();	
 	}
@@ -60,13 +62,32 @@ public class ReferenceCastingMain {
 		
 		Cat cat = (Cat) animal; 
 		cat.eat();
-//		cat.jump();
+		cat.jump();
 //		cat.sayHello();
 		
 		HelloKitty kitty = (HelloKitty) animal;
 		kitty.eat();
 		kitty.jump();
 		kitty.sayHello();
+	}
+	
+	public static void instanceofMethod(){
+		Animal animal = new Cat();
+		animal.eat();	
+		
+		if(animal instanceof Cat){
+			Cat cat = (Cat) animal; 
+			cat.eat();
+			cat.jump();			
+		}
+
+		if(animal instanceof HelloKitty){
+			HelloKitty kitty = (HelloKitty) animal;
+			kitty.eat();
+			kitty.jump();
+			kitty.sayHello();			
+		}
+
 	}
 }
 
