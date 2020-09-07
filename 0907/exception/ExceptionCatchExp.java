@@ -71,7 +71,7 @@ public class ExceptionCatchExp {
 		
 		// 不能任意 catch 尚未發生的 Exception 子類別例外錯誤
 //		try {
-			
+//			
 //		} catch(FileNotFoundException fileNotFoundException) {
 			
 //		}
@@ -88,6 +88,13 @@ public class ExceptionCatchExp {
 		numberFormatException();
 		// java.lang.ClassCastException 類別轉型錯誤
 		classCastException();
+		
+		try {
+			
+		}catch (NullPointerException nullPointerException){
+			System.out.println(nullPointerException.getMessage());
+			nullPointerException.printStackTrace();
+		}
 	}
 	
 	public static void nullPointerException() {
