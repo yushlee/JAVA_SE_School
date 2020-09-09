@@ -24,7 +24,23 @@ public class ClassTypeExp {
 		// The final field Interface.text cannot be assigned
 //		Interface.text = "B";
 		
+		InterfaceB obj1 = new SubClassC();
+		obj1.interfaceBMethod();
+//		obj1.interfaceAMethod();
 		
+		InterfaceA obj2 = new SubClassC();
+		obj2.interfaceAMethod();
+//		obj2.interfaceBMethod();
+		
+		ConcreteA obj3 = new SubClassC();
+		obj3.concreteA();
+//		obj3.interfaceAMethod();
+//		obj3.interfaceBMethod();
+		
+		SubClassC obj4 = new SubClassC();
+		obj4.interfaceAMethod();
+		obj4.interfaceBMethod();
+		obj4.concreteA();
 	}
 
 }
@@ -104,4 +120,32 @@ class SubClass2 implements Interface {
 }
 
 
+interface InterfaceA{
+	public void interfaceAMethod();
+}
 
+interface InterfaceB{ 
+	public void interfaceBMethod();
+}
+
+class ConcreteA {
+	public void concreteA(){
+		System.out.println("concreteA");
+	}
+}
+class ConcreteB {}
+
+//  在Java語言中類別只能單一繼承類別，但可以實作多個介面 (先繼承後實作)
+class SubClassC extends ConcreteA implements InterfaceA,InterfaceB {
+
+	@Override
+	public void interfaceAMethod() { 
+		System.out.println("interfaceAMethod");
+	}
+
+	@Override
+	public void interfaceBMethod() {
+		System.out.println("interfaceBMethod");
+	}
+	
+}
