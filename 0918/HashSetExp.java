@@ -72,7 +72,8 @@ public class HashSetExp {
 		// 使用Iterator來走訪Set內容
 		for(Iterator iterator = set.iterator(); iterator.hasNext();) {
 			Book book = (Book) iterator.next();
-			System.out.println(String.valueOf(book.hashCode()) + " : " + book );
+			System.out.println(book.toString());
+//			System.out.println(String.valueOf(book.hashCode()) + " : " + book );
 		}
 	}
 }
