@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import com.training.session6.collection.Book;
+
 public class HashMapExp {
 	public static void main(String[] args) {
 		// HashMap實作Map介面，內部實作使用Hash Table。
@@ -40,11 +42,34 @@ public class HashMapExp {
 		   System.out.println("key:" + key);
 		   System.out.println("value:" + value);
 		}		
+		System.out.println("--------------------------------");
 		// values 走訪map所有的value
 		Collection values  = mapDatas.values();
 		for(Iterator i = values.iterator(); i.hasNext();){
 			String value = (String) i.next();
 			System.out.println("value:" + value);
 		}
+		
+		
+		
+		Book book1 = new Book("JavaSE技術手冊", 111);
+		Book book2 = new Book("Servlet & JSP教學手冊", 222);
+		Book book3 = new Book("jQuery實戰手冊", 333);
+		Book book4 = new Book("Spring 2.0 技術手冊", 555);
+		Book book5 = new Book("Spring 2.0 技術手冊", 555);
+		
+		Map books = new HashMap();
+		books.put(book1, null);
+		books.put(book2, null);
+		books.put(book3, null);
+		books.put(book4, null);
+		books.put(book5, null);
+		
+		Set bookSet = books.keySet();
+		for(Iterator i = bookSet.iterator(); i.hasNext();){
+			Book book = (Book) i.next();
+			System.out.println(book);
+		}
+		
 	}
 }
