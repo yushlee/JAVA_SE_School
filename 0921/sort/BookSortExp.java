@@ -8,16 +8,23 @@ import java.util.List;
 public class BookSortExp {
 
 	public static void main(String[] args) {
+		
 		List<Book> books = new ArrayList<>();
 		books.add(new Book("B", 1));
 		books.add(new Book("B", 2));
 		books.add(new Book("B", 3));
+		books.add(new Book("C", 3));
+		books.add(new Book("C", 2));
+		books.add(new Book("C", 1));		
 		books.add(new Book("A", 3));
 		books.add(new Book("A", 2));
 		books.add(new Book("A", 1));
 		
 		// 作法一：建立比較器實作介面 Comparator<T>
-		Collections.sort(books, new BookComparator());
+//		Collections.sort(books, new BookComparator());
+		
+		// 作法二：集合元素物件實作介面 Comparable<T>
+		Collections.sort(books);
 		
 		for(Book book : books){
 			System.out.println(book);
