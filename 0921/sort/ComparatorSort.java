@@ -20,6 +20,19 @@ public class ComparatorSort {
 			System.out.println(data);
 		}
 		
+		System.out.println("---------------------------------");
+		
+		List<String> texts = new ArrayList();		
+		texts.add("B");
+		texts.add("D");
+		texts.add("A");
+		texts.add("C");
+		
+		Collections.sort(texts, new LetterComparator());
+		
+		for(String text : texts){
+			System.out.println(text);
+		}
 	}
 
 }
@@ -39,8 +52,14 @@ class NumberComparator implements Comparator<Integer> {
 //		return 0;
 		
 		return o2.compareTo(o1);
+	}	
+}
+
+class LetterComparator implements Comparator<String>{
+
+	@Override
+	public int compare(String o1, String o2) {
+		return o2.compareTo(o1);
 	}
-
-
 	
 }
