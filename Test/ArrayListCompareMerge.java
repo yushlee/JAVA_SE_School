@@ -26,7 +26,30 @@ public class ArrayListCompareMerge {
 		List<Integer> numbersOne = new ArrayList<>(Arrays.asList(new Integer[] {9,8,7,6,5,4}));
 		List<Integer> numbersTwo = new ArrayList<>(Arrays.asList(new Integer[] {6,5,4,3,2,1}));
 		
-
+		List<Set<Integer>> resultList = new ArrayList<>();
+		Set<Integer> one = new TreeSet<>();
+		Set<Integer> two = new TreeSet<>();
+		Set<Integer> three = new TreeSet<>();
+		resultList.add(one);
+		resultList.add(two);
+		resultList.add(three);
+		
+		for(int i = 0 ; i < numbersOne.size() ; i++){
+			Integer oneNo = numbersOne.get(i);
+			if(numbersTwo.contains(oneNo)){
+				three.add(oneNo);
+			}else{
+				one.add(oneNo);
+			}
+			Integer twoNo = numbersTwo.get(i);
+			if(!numbersOne.contains(twoNo)){
+				two.add(twoNo);
+			}
+		}
+		
+		for(Set<Integer> list : resultList){
+			System.out.println(list);
+		}
 		
 	}
 
